@@ -8,13 +8,6 @@ title: Homepage
     {% for post in paginator.posts %}
     <li itemscope itemtype="http://schema.org/BlogPosting">
       <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
-        <style>
-          "#post-wrap-{{forloop.index}}"
-
-            {
-            background: darken($maincolor, forloop.index);
-          }
-        </style>
         <div class="p-wrap" id="post-wrap-{{ forloop.index }}">
           <article class="inner">
             <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -23,6 +16,12 @@ title: Homepage
             <p itemprop="name headline">{{ post.title }}</p>
           </article>
         </div>
+        <style>
+          #post-wrap-{{forloop.index}}
+          {
+            background: #000000;
+          }
+        </style>
       </a>
     </li>
     {% endfor %}
