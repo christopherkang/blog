@@ -8,10 +8,16 @@ title: Homepage
     {% for post in paginator.posts %}
     <li itemscope itemtype="http://schema.org/BlogPosting">
       <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
-        <div class="p-wrap">
+        <style>
+          "#post-wrap-{{forloop.index}}"
+
+            {
+            background: darken($maincolor, forloop.index);
+          }
+        </style>
+        <div class="p-wrap" id="post-wrap-{{ forloop.index }}">
           <article class="inner">
-            <time datetime="{{ post.date | date_to_xmlschema }}"
-                itemprop="datePublished">
+            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
               {{ post.date | date_to_string }}
             </time>
             <p itemprop="name headline">{{ post.title }}</p>
@@ -31,11 +37,11 @@ title: Homepage
   <span class="next">Older</span>
   {% endif %}
   {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-    <a href="{{ site.baseurl }}/" class="newer">Newer</a>
-    {% else %}
-    <a href="{{ site.baseurl }}/page/{{paginator.previous_page}}" class="newer">Newer</a>
-    {% endif %}
+  {% if paginator.page == 2 %}
+  <a href="{{ site.baseurl }}/" class="newer">Newer</a>
+  {% else %}
+  <a href="{{ site.baseurl }}/page/{{paginator.previous_page}}" class="newer">Newer</a>
+  {% endif %}
   {% else %}
   <span class="previous">Newer</span>
   {% endif %}
