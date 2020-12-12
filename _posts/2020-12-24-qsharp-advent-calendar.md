@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Q# Advent Calendar: Meeting a Molecule"
-date:   2014-01-03 16:57:51
+date:   2020-12-24 01:01:01
 ---
 
-Test
-$ \epsilon $ 
-$$ \delta $$
+Test $$ \delta $$
+
+\[ potato \] 
