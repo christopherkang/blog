@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Q# Advent Calendar: Meeting a Molecule'
-date: 2020-12-24 01:01:01
+date: {}
 published: true
 ---
 
@@ -80,17 +80,17 @@ $$
 
 Where:
 
-$H = \sum_{p, q} h_{pq} a^{\dagger}_p a_q + \sum_{p, q, r, s} h_{pqrs} a^{\dagger}_p a^{\dagger}_q a_r a_s$ 
+$$H = \sum_{p, q} h_{pq} a^{\dagger}_p a_q + \sum_{p, q, r, s} h_{pqrs} a^{\dagger}_p a^{\dagger}_q a_r a_s$$ 
 
-These two sums comprise the Hamiltonian - the left sum is the "one-body terms" (moving an electron from $q$ to $p$) and the right sum is the "two-body terms" (moving electrons from $r, s$ to $p, q$).
+These two sums comprise the Hamiltonian - the left sum is the "one-body terms" (moving an electron from $$q$$ to $$p$$) and the right sum is the "two-body terms" (moving electrons from $$r, s$$ to $$p, q$$).
 
-It turns out $H$ is actually hermitian (by symmetry). So, $-iHt$ is also anti-hermitian when $t$ real, so $e^{-iHt}$ unitary (this is a given property). So, we just need to find a circuit that will actually apply $e^{-iHt}$, which evolves our initial $|\psi(0)\rangle$ state into $|\psi(t)\rangle$.
+It turns out $$H$$ is actually hermitian (by symmetry). So, $$-iHt$$ is also anti-hermitian when $$t$$ real, so $$e^{-iHt}$$ unitary (this is a given property). So, we just need to find a circuit that will actually apply $$e^{-iHt}$$, which evolves our initial $$|\psi(0)\rangle$$ state into $$|\psi(t)\rangle$$.
 
-Additionally, if we are given an eigenvector $|\psi_v\rangle$ of $H$, then the eigenvalue $\lambda_v$ is the associated energy level. So, this yields two key problems: implementing the $e^{-iHt}$ simulation and the eigenvalue $\lambda_v$. 
+Additionally, if we are given an eigenvector $|\psi_v\rangle$ of $H$, then the eigenvalue $$\lambda_v$$ is the associated energy level. So, this yields two key problems: implementing the $$e^{-iHt}$$ simulation and the eigenvalue $$\lambda_v$$. 
 
 ## The Jordan-Wigner Transform
 ### Key Ideas
-The Jordan-Wigner (JW) transform is fascinating because it maps our fermionic Hamiltonian $H$ into the sum of Pauli operators, meaning that $e^{-iHt}$ is actually implementable in terms of our existing Paulis.
+The Jordan-Wigner (JW) transform is fascinating because it maps our fermionic Hamiltonian $$H$$ into the sum of Pauli operators, meaning that $$e^{-iHt}$$ is actually implementable in terms of our existing Paulis.
 
 ### Using the Transform
 While we have the Hamiltonian, it's still in this foreign term. We want to bring it back to Paulis, something that we can implement. If we look at the matrix form, we can actually see that:
