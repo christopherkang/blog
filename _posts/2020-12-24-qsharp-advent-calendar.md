@@ -1,16 +1,8 @@
 ---
 layout: post
 title: 'Q# Advent Calendar: Meeting a Molecule'
-date: {}
+date: 2020-12-24 01:01:01
 published: true
----
----
-title: Scratch
-keywords:
-    - math
-
-class: scratch
-created: 12/12/2020 13:24
 ---
 
 # The Basics of Fermionic/Molecular Simulation
