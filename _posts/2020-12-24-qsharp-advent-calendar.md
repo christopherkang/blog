@@ -5,7 +5,7 @@ date: 2020-12-24 01:01:01
 published: true
 ---
 
-Q# Advent Calendar, Day 24, Christopher Kang
+Christopher Kang, CS @ UW + Technical Intern @ PNNL
 
 ## Foreword
 Mariia asked me to contribute to the Q# Advent calendar, so what better than molecular simulations?! With a little bit of math and theoretical chemistry, we can understand the life of a molecule.
