@@ -56,6 +56,7 @@ a_p = \bigotimes_{k = 0}^{p - 1} Z_k \otimes \begin{bmatrix}
 $$
 
 This looks complicated, but let's begin by looking at the matrices. Note that:
+
 $$
 \begin{bmatrix}
 0 & 1 \\
@@ -84,7 +85,7 @@ $$H = \sum_{p, q} h_{pq} a^{\dagger}_p a_q + \sum_{p, q, r, s} h_{pqrs} a^{\dagg
 
 These two sums comprise the Hamiltonian - the left sum is the "one-body terms" (moving an electron from $$q$$ to $$p$$) and the right sum is the "two-body terms" (moving electrons from $$r, s$$ to $$p, q$$).
 
-It turns out $$H$$ is actually hermitian (by symmetry). So, $$-iHt$$ is also anti-hermitian when $$t$$ real, so $$e^{-iHt}$$ unitary (this is a given property). So, we just need to find a circuit that will actually apply $$e^{-iHt}$$, which evolves our initial $$|\psi (0) \rangle$$ state into $$|\psi (t) \rangle$$.
+It turns out $$H$$ is actually hermitian (by symmetry). So, $$-iHt$$ is also anti-hermitian when $$t$$ real, so $$e^{-iHt}$$ unitary (this is a given property). So, we just need to find a circuit that will actually apply $$e^{-iHt}$$, which evolves our initial $$\vert \psi (0) \rangle$$ state into $$\vert \psi (t) \rangle$$.
 
 Additionally, if we are given an eigenvector $|\psi_v\rangle$ of $H$, then the eigenvalue $$\lambda_v$$ is the associated energy level. So, this yields two key problems: implementing the $$e^{-iHt}$$ simulation and the eigenvalue $$\lambda_v$$. 
 
