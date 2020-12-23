@@ -8,7 +8,7 @@ published: true
 Christopher Kang, CS @ UW + Technical Intern @ PNNL
 
 ## Foreword
-Mariia asked me to contribute to the Q# Advent calendar, so what better than molecular simulations?! With a little bit of math and theoretical chemistry, we can understand the life of a molecule.
+Molecular simulation has been described as ["Quantum's killer app"](https://cen.acs.org/articles/95/i43/Chemistry-quantum-computings-killer-app.html). The hope is, with quantum algorithms and a bit of math, we can understand the hidden lives of molecules.
 
 [Andrew’s intro](https://ahelwer.ca/post/2019-12-21-quantum-chemistry/) to the core concepts of Hamiltonian simulation was fantastic, and I wanted to provide an add-on that discusses more in-depth material on the theoretical chemistry foundations, quantum circuits, and open problems.
 
@@ -29,6 +29,8 @@ The second reason is real-world applicability: large-scale simulations could fun
 
 <img src="{{ site.baseurl }}/assets/img/covid.png">
 _Source: CDC / Wikimedia Commons_
+
+Our overall goal with this algorithm is to identify the superposition of electrons in a molecule and the configuration's energy level. By testing different configurations, we'll be able to find the ground state configuration (and thus the "normal" state of the molecule).
 
 ### Algorithm Strategy
 1. In the first section, we'll outline the fundamental problem: simulating a Hamiltonian and identifying its eigenvalue. 
@@ -161,6 +163,7 @@ So, the eigenvalue actually emerges in the phase applied! So, we can use quantum
 ## Analysis, Alternatives, and Next Steps
 ### Advantages
 In this section, we'll note some of the advantages of the phase estimation-based (PE) simulation algorithm.
+
 **Polynomial scaling**
 Each Hamiltonian term simulated only takes, at most, linear time. So, overall, the simulation is still polynomial with both time and space complexity in number of Hamiltonian terms.
 
@@ -177,7 +180,7 @@ While not discussed, preparing $|\psi\rangle$ on a quantum computer is actually 
 Even though the simulation only has a polynomial number of gates, they often require entire sections of qubits to be engaged in computation, greatly increasing circuit depth. This means that PE simulation is unobtainable on NISQ devices.
 
 **Precision required**
-Chemical accuracy is within 0.0016 Hartrees of the actual result of a molecule. This is an incredibly small number, requiring at least 13 qubits reserved for QPE. Even slight deviations during implementation can affect this value, meaning that  
+Chemical accuracy is within 0.0016 Hartrees of the actual result of a molecule. This is an incredibly small number, requiring at least 13 qubits reserved for QPE. Even slight deviations during implementation can affect this value, meaning that high fidelity devices are needed to accurately simulate molecules.  
 
 ### Next Steps
 This was a summative review of PE based simulation, but there are some next steps for those who are curious!
