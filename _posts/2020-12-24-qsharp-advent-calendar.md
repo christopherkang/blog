@@ -7,7 +7,7 @@ published: true
 
 # The Basics of Fermionic/Molecular Simulation
 
-Q# Advent Calendar, Day 24 | Christopher Kang
+Q# Advent Calendar, Day 24, Christopher Kang
 
 ## Foreword
 Mariia asked me to contribute to the Q# Advent calendar, so what better than molecular simulations?! With a little bit of math and theoretical chemistry, we can understand the life of a molecule.
@@ -84,7 +84,7 @@ $$H = \sum_{p, q} h_{pq} a^{\dagger}_p a_q + \sum_{p, q, r, s} h_{pqrs} a^{\dagg
 
 These two sums comprise the Hamiltonian - the left sum is the "one-body terms" (moving an electron from $$q$$ to $$p$$) and the right sum is the "two-body terms" (moving electrons from $$r, s$$ to $$p, q$$).
 
-It turns out $$H$$ is actually hermitian (by symmetry). So, $$-iHt$$ is also anti-hermitian when $$t$$ real, so $$e^{-iHt}$$ unitary (this is a given property). So, we just need to find a circuit that will actually apply $$e^{-iHt}$$, which evolves our initial $$|\psi(0)\rangle$$ state into $$|\psi(t)\rangle$$.
+It turns out $$H$$ is actually hermitian (by symmetry). So, $$-iHt$$ is also anti-hermitian when $$t$$ real, so $$e^{-iHt}$$ unitary (this is a given property). So, we just need to find a circuit that will actually apply $$e^{-iHt}$$, which evolves our initial $$|\psi (0) \rangle$$ state into $$|\psi (t) \rangle$$.
 
 Additionally, if we are given an eigenvector $|\psi_v\rangle$ of $H$, then the eigenvalue $$\lambda_v$$ is the associated energy level. So, this yields two key problems: implementing the $$e^{-iHt}$$ simulation and the eigenvalue $$\lambda_v$$. 
 
