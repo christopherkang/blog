@@ -1,11 +1,9 @@
 ---
 layout: post
-title: 'Q# Advent Calendar: Meeting a Molecule'
+title: 'Q# Advent Calendar: A Summary of Fermionic/Molecular Simulation'
 date: 2020-12-24 01:01:01
 published: true
 ---
-
-# The Basics of Fermionic/Molecular Simulation
 
 Q# Advent Calendar, Day 24, Christopher Kang
 
