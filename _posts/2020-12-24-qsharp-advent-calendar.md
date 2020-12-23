@@ -27,7 +27,7 @@ The first reason is basic research: even today, we cannot predict the precise st
 
 The second reason is real-world applicability: large-scale simulations could fundamentally transform chemical design. One example is in drug discovery: suppose you have multiple candidates for a vaccine (say, for a global pandemic). Which candidate do you send to phased clinical trials? With a sufficiently large molecular simulation, you could screen potential therapeutics digitally (instead of through assays / human testing), which would be cheaper, quicker, and safer. 
 
-![covid.png](covid.png)
+<img src="{{ site.baseurl }}/assets/img/covid.png">
 _Source: CDC / Wikimedia Commons_
 
 ### Algorithm Strategy
