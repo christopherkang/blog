@@ -79,7 +79,7 @@ $$
 -i \hbar\frac{d}{d t} |\psi(t)\rangle = H |\psi(t) \rangle
 $$
 
-Where:
+Where $\vert \psi(t) \rangle$ is the "state vector" or configuration of the electrons with respect to time $t$, and the Hamiltonian is:
 
 $$H = \sum_{p, q} h_{pq} a^{\dagger}_p a_q + \sum_{p, q, r, s} h_{pqrs} a^{\dagger}_p a^{\dagger}_q a_r a_s$$ 
 
@@ -94,7 +94,7 @@ Additionally, if we are given an eigenvector $\vert \psi_v\rangle$ of $H$, then 
 The Jordan-Wigner (JW) transform is fascinating because it maps our fermionic Hamiltonian $$H$$ into the sum of Pauli operators, meaning that $$e^{-iHt}$$ is actually implementable in terms of our existing Paulis.
 
 ### Using the Transform
-While we have the Hamiltonian, it's still in this foreign term. We want to bring it back to Paulis, something that we can implement. If we look at the matrix form, we can actually see that:
+While we have the Hamiltonian, the fermionic operators that comprise it are foreign to quantum devices. We want to transform $H$ into Paulis, something that we can implement. Looking at the matrix form, we see:
 
 $$
 \begin{bmatrix}
@@ -137,7 +137,7 @@ Each of the terms from $\sum h_{pq} a^\dagger_p a_q$, $\sum h_{pqrs} a^\dagger_p
 
 *Some of these terms have their conjugates by symmetry of electron operations.
 
-For simplicity, we will only solve for the simplest term (PP), but all have explicit Pauli formulations that can be found algebraically. Note that:
+For simplicity, we will only solve for the simplest term (PP), but **all have explicit Pauli formulations** that can be found algebraically. Note that:
 $$
 a^\dagger_p a_p = \bigotimes_{k = 0}^{p - 1} Z_k \otimes \Big(\frac{X_p - iY_p}{2}) \bigotimes_{k = 0}^{p - 1} Z_k \otimes \Big(\frac{X_p + iY_p}{2}) \Big) \\
 = \frac{X_p X_p - iY_p X_p + iX_p Y_p + Y_p Y_p}{4} \\
@@ -158,7 +158,7 @@ e^{-iHt} = \sum_{k = 0}^\infty \frac{(-iHt)^k}{k!} |\psi_v \rangle \\
 = e^{-i \lambda_v t} |\psi_v \rangle
 $$
 
-So, the eigenvalue actually emerges in the phase applied! So, we can use quantum phase estimation (QPE) on the Hamiltonian to identify $e^{-i\lambda_v t}$, and by proxy, $\lambda_v$. 
+So, the eigenvalue actually emerges in the phase applied! Thus, we apply quantum phase estimation (QPE) on the Hamiltonian to identify $e^{-i\lambda_v t}$, and by proxy, $\lambda_v$. 
 
 ## Analysis, Alternatives, and Next Steps
 ### Advantages
@@ -173,7 +173,7 @@ In addition, space complexity is linear with the number of orbitals, as each qub
 The PE algorithm natively uses operations which will likely be common on quantum devices - namely, QPE and simple rotation/CNOT gates.
 
 **Ansatz Preparation**
-While not discussed, preparing $|\psi\rangle$ on a quantum computer is actually much more straightforward than on a classical computer. Parametrized methods like Unitary Coupled Cluster (UCC) can be [directly implemented on quantum comptuers](https://quantaggle.com/algorithms/ansatz/) with techniques similar to the ones used for simulation. 
+While not discussed, preparing $\vert \psi\rangle$ on a quantum computer is actually much more straightforward than on a classical computer. Parametrized methods like Unitary Coupled Cluster (UCC) can be [directly implemented on quantum comptuers](https://quantaggle.com/algorithms/ansatz/) with techniques similar to the ones used for simulation. 
 
 ### Challenges
 **Circuit depth**
