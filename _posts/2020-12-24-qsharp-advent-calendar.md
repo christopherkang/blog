@@ -139,7 +139,7 @@ Each of the terms from $\sum h_{pq} a^\dagger_p a_q$, $\sum h_{pqrs} a^\dagger_p
 
 For simplicity, we will only solve for the simplest term (PP), but **all have explicit Pauli formulations** that can be found algebraically. Note that:
 $$
-a^\dagger_p a_p = \bigotimes_{k = 0}^{p - 1} Z_k \otimes \Big(\frac{X_p - iY_p}{2}) \bigotimes_{k = 0}^{p - 1} Z_k \otimes \Big(\frac{X_p + iY_p}{2}) \Big) \\
+a^\dagger_p a_p = \bigotimes_{k = 0}^{p - 1} Z_k \otimes \Big(\frac{X_p - iY_p}{2} \Big) \bigotimes_{k = 0}^{p - 1} Z_k \otimes \Big(\frac{X_p + iY_p}{2} \Big) \\
 = \frac{X_p X_p - iY_p X_p + iX_p Y_p + Y_p Y_p}{4} \\
 = \frac{\mathbb{1} - Z_p}{2}
 $$
