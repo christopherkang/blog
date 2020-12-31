@@ -2,6 +2,7 @@
 layout: post
 title:  "A week-end in the desert (shawarmas and belly dancers)"
 date:   2014-01-19 16:57:51
+published: false
 ---
 
 A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.

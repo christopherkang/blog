@@ -2,6 +2,7 @@
 layout: post
 title:  "Moving to Tokyo, yeeha!"
 date:   2014-01-22 16:57:51
+published: false
 ---
 
 <img src="{{ site.baseurl }}/assets/img/img1.jpg">
